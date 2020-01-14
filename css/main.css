@@ -19,8 +19,12 @@ html {
 
 body {
   background-color: #e2e2e2;
-  margin: 1em;
+  margin: 0;
   max-width: 50em;
+}
+
+.wrapper {
+  margin: 1rem 1rem 3rem;
 }
 
 h1 {
@@ -33,7 +37,7 @@ p {
   margin: 0 0 2em;
 }
 
-.btn {
+a {
   text-decoration: none;
   background-color: #555;
   color: #fff;
@@ -41,7 +45,11 @@ p {
   border-radius: 4px;
 }
 
-img {
+.btn:hover {
+  background-color: #000;
+}
+
+.img-flex {
   display: block;
   width: 100%;
   margin-top: 2em;
@@ -57,10 +65,11 @@ img {
   .wrapper {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .content {
-    width: 50%;
+    width: 49%;
   }
 
   .img-flex {
@@ -70,6 +79,11 @@ img {
   .img {
     width: 50%;
     margin: 0;
+    display: inline-block;
+  }
+
+  .img, .content {
+    display: inline-block;
   }
 
 }
@@ -81,12 +95,27 @@ img {
     line-height: 1.5;
   }
 
+  .content {
+    padding: 1rem;
+  }
+
+  .img-flex {
+    display: inline-block;
+    flex-wrap: wrap;
+  }
+
 }
 
 @media only screen and (min-width: 90em) {
 
   html {
     font-size: 130%;
+  }
+
+  section {
+    position: relative;
+    display: block;
+    margin: 0 auto;
   }
 
 }
